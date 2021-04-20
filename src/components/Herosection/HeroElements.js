@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import imageOne from '../../images/eka-webbi.png'
+import imageTwo from '../../images/eka-mobile.jpg'
 import koodi from '../../images/code-mobile.svg'
 
 export const HeroContainer = styled.div`
@@ -8,7 +9,7 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 24px;
-    height: 822px;
+    height: 100vh;
     position: relative;
     z-index: 1;
 `
@@ -34,8 +35,13 @@ export const BgPicture = styled.image`
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     z-index: -10;
+
+    @media screen and (max-width: 480px) {
+        background-image: url(${imageTwo});
+        background-position: 0 10%;
+    }
 `
 
 export const HeroWrapper = styled.div`
@@ -71,9 +77,9 @@ export const Hero1H1 = styled.div`
 
     @media screen and (max-width: 768px) {
         font-size: 1.6rem;
-        bottom: 4rem;
+        bottom: 5rem;
         padding: 0;
-        right: 3rem;
+        right: 2rem;
         position: absolute;
     }
 `

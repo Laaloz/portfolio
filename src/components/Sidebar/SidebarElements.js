@@ -24,10 +24,6 @@ export const SidebarMenu = styled.ul`
     text-align: center;
     background: #060709;
     border-radius: 0 10px;
-
-    @media screen and (max-width: 480px) {
-        grid-template-rows: repeat(6, 60px);
-    }
 `
 
 export const CloseIcon = styled(FaTimes)`

@@ -16,11 +16,11 @@ export const ContactContainer = styled.div`
     background-position: center;
 
     @media screen and (max-width: 768px) {
-        height: 1100px;
+        height: 800px;
     }
 
     @media screen and (max-width: 480px) {
-        height: 1300px;
+        height: 900px;
     }
 `
 
@@ -39,7 +39,7 @@ export const ContactWrapper = styled.div`
 
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
-        padding: 0 20px;
+        padding: 0;
     }
 }
 `
@@ -59,7 +59,7 @@ export const Form = styled.form`
 
     textarea {
         max-height: 300px;
-        width: 250px;
+        max-width: 250px;
         margin: 15px 0 10px 0;
         padding: 5px 10px;
         border-radius: 8px;
@@ -68,7 +68,7 @@ export const Form = styled.form`
     input {
         padding: 0 10px;
         max-height: 50px;
-        width: 250px;
+        max-width: 250px;
         margin: 5px;
         border: none;
         border-radius: 8px;
@@ -89,6 +89,16 @@ export const Form = styled.form`
             color: white;
             transform: scale(1.12);
             transition: all 0.2s ease-in-out;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        input {
+            width: 300px;
+        }
+
+        textarea {
+            width: 300px;
         }
     }
 `

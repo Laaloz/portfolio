@@ -17,7 +17,7 @@ const Contact = () => {
                     <input type="text" id="fname" name="name" placeholder="nimi..." />  
                     <input type="email" id="sposti" name="email" placeholder="@sähköposti..." />  
                     <textarea id="message" name="message" placeholder="teksti..." height="30" rows="20"></textarea>
-                    <input type="submit" class="send-message" value="Viesti" />           
+                    <input type="submit" className="send-message" value="Viesti" />           
                 </Form>
                 <ContactCard>
                     <ContactIcon src={mail}/>

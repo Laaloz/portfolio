@@ -86,7 +86,8 @@ export const SosialMediaOne = styled.div`
     height: 30px;
     right: 38vw;
     cursor: pointer;
-    font-size: 1.1rem;
+    height: 16px;
+    width: 16px;
 
     &:hover {
         opacity: 50%;
@@ -98,7 +99,8 @@ export const SosialMediaTwo = styled.div`
     padding-left: 1rem;
     right: 33vw;
     cursor: pointer;
-    font-size: 1.1rem;
+    height: 16px;
+    width: 16px;
 
     &:hover {
         opacity: 50%;

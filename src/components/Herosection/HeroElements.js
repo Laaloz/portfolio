@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import imageOne from '../../images/eka-webbi.png'
-import imageTwo from '../../images/eka-mobile.jpg'
 import koodi from '../../images/code-mobile.svg'
 
 export const HeroContainer = styled.div`
@@ -9,7 +8,8 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 24px;
-    height: 100vh;
+    height: 80vh;
+    min-height: 320px;
     position: relative;
     z-index: 1;
 `
@@ -30,7 +30,7 @@ export const BgPicture = styled.image`
     background-repeat: no-repeat;
     display: block;
     height: 100%;
-    width: 100%;
+    min-width: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -39,8 +39,7 @@ export const BgPicture = styled.image`
     z-index: -10;
 
     @media screen and (max-width: 480px) {
-        background-image: url(${imageTwo});
-        background-position: 0 10%;
+        background-position: contain;
     }
 `
 
@@ -61,7 +60,7 @@ export const HeroH1 = styled.div`
     color: #CBCBCB;
 
     @media screen and (max-width: 768px) {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         bottom: 2rem;
         position: absolute
     }
@@ -76,7 +75,7 @@ export const Hero1H1 = styled.div`
     padding-left: 50vw;
 
     @media screen and (max-width: 768px) {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         bottom: 5rem;
         padding: 0;
         right: 2rem;
@@ -87,15 +86,17 @@ export const Hero1H1 = styled.div`
 export const CodeImg = styled.img.attrs({
     src: `${koodi}`
 })`
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     display: grid;
     margin-left: 1.7rem;
     margin-top: -.8rem;
 
     @media screen and (max-width: 768px) {
         bottom: -1.3rem;
-        right: 1.2rem;
+        right: .9rem;
         position: absolute;
+        width: 27px;
+        height: 27px;
     }
 `

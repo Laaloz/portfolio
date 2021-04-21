@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import imageOne from '../../images/tausta-webbi.jpg'
 
 export const ContactContainer = styled.div`
-    height: 800px;
+    height: 100vh;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,7 +17,7 @@ export const ContactContainer = styled.div`
     background-position: center;
 
     @media screen and (max-width: 768px) {
-        height: 800px;
+        height: 100vh;
     }
 
     @media screen and (max-width: 480px) {

@@ -1,7 +1,6 @@
 import React from 'react'
 import mail from '../../images/mail-mobile.svg'
 import location from '../../images/location-mobile.svg'
-import phone from '../../images/phone-mobile.svg'
 import {ContactContainer, ContactH1, ContactWrapper, ContactIcon, ContactP, ContactCard, Form} from './ContactElements'
 
 
@@ -22,8 +21,6 @@ const Contact = () => {
                 <ContactCard>
                     <ContactIcon src={mail}/>
                     <ContactP>laaloceesay@gmail.com</ContactP>
-                    <ContactIcon src={phone}/>
-                    <ContactP>+358 405452267</ContactP>
                     <ContactIcon src={location}/>
                     <ContactP>Jyväskylä</ContactP>  
                 </ContactCard>

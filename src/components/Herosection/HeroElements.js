@@ -8,10 +8,14 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 24px;
-    height: 80vh;
+    height: 100vh;
     min-height: 320px;
     position: relative;
     z-index: 1;
+
+    @media screen and (max-width: 480px) {
+        height: 80vh;
+    }
 `;
 
 export const HeroBg = styled.div`

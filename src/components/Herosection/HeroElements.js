@@ -1,9 +1,9 @@
-import styled from 'styled-components'
-import imageOne from '../../images/eka-webbi.png'
-import koodi from '../../images/code-mobile.svg'
+import styled from "styled-components";
+import imageOne from "../../images/eka-webbi.png";
+import koodi from "../../images/code-mobile.svg";
 
 export const HeroContainer = styled.div`
-    background: #F3F3F3;
+    background: #f3f3f3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@ export const HeroContainer = styled.div`
     min-height: 320px;
     position: relative;
     z-index: 1;
-`
+`;
 
 export const HeroBg = styled.div`
     position: absolute;
@@ -23,7 +23,7 @@ export const HeroBg = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
-`
+`;
 
 export const BgPicture = styled.image`
     background-image: url(${imageOne});
@@ -41,36 +41,36 @@ export const BgPicture = styled.image`
     @media screen and (max-width: 480px) {
         background-position: contain;
     }
-`
+`;
 
 export const HeroWrapper = styled.div`
-display: flex;
-justify-content: space-between;
-height: 80px;
-z-index: 1;
-width: 100%;
-padding: 0;
-max-width: 1055px;
-`
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    padding: 0;
+    max-width: 1055px;
+`;
 
 export const HeroH1 = styled.div`
     font-size: 2rem;
     font-weight: bold;
     padding-left: 2rem;
-    color: #CBCBCB;
+    color: #cbcbcb;
 
     @media screen and (max-width: 768px) {
         font-size: 1.3rem;
         bottom: 2rem;
-        position: absolute
+        position: absolute;
     }
-`
+`;
 
 export const Hero1H1 = styled.div`
     font-size: 2rem;
     font-weight: bold;
     padding: 0;
-    color: #CBCBCB;
+    color: #cbcbcb;
     margin-top: 2rem;
     padding-left: 50vw;
 
@@ -81,22 +81,22 @@ export const Hero1H1 = styled.div`
         right: 2rem;
         position: absolute;
     }
-`
+`;
 
 export const CodeImg = styled.img.attrs({
-    src: `${koodi}`
+    src: `${koodi}`,
 })`
     width: 30px;
     height: 30px;
     display: grid;
     margin-left: 1.7rem;
-    margin-top: -.8rem;
+    margin-top: -0.8rem;
 
     @media screen and (max-width: 768px) {
         bottom: -1.3rem;
-        right: .9rem;
+        right: 0.9rem;
         position: absolute;
         width: 27px;
         height: 27px;
     }
-`
+`;

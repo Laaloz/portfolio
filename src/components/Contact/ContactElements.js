@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import imageOne from '../../images/tausta-webbi.jpg'
+import styled from "styled-components";
+import imageOne from "../../images/tausta-webbi.jpg";
 
 export const ContactContainer = styled.div`
     height: 100vh;
@@ -23,7 +23,7 @@ export const ContactContainer = styled.div`
     @media screen and (max-width: 480px) {
         height: 900px;
     }
-`
+`;
 
 export const ContactWrapper = styled.div`
     max-width: 1000px;
@@ -43,7 +43,7 @@ export const ContactWrapper = styled.div`
         padding: 0;
     }
 }
-`
+`;
 
 export const Form = styled.form`
     background: black;
@@ -55,7 +55,7 @@ export const Form = styled.form`
     max-height: 340px;
     padding: 50px;
     opacity: 50%;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in-out;
 
     textarea {
@@ -73,7 +73,7 @@ export const Form = styled.form`
         margin: 5px;
         border: none;
         border-radius: 8px;
-    } 
+    }
 
     &:hover {
         transform: scale(1.02);
@@ -102,7 +102,7 @@ export const Form = styled.form`
             width: 300px;
         }
     }
-`
+`;
 
 export const ContactCard = styled.div`
     background: black;
@@ -114,7 +114,7 @@ export const ContactCard = styled.div`
     max-height: 340px;
     padding: 30px;
     opacity: 50%;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in-out;
 
     &:hover {
@@ -127,13 +127,13 @@ export const ContactCard = styled.div`
         width: 350px;
         padding-top: 60px;
     }
-`
+`;
 
 export const ContactIcon = styled.img`
     height: 20px;
     width: 20px;
     margin: 15px 0 2px 0;
-`
+`;
 export const ContactH1 = styled.h1`
     font-size: 2.5rem;
     color: black;
@@ -143,15 +143,15 @@ export const ContactH1 = styled.h1`
     @media screen and (max-width: 480px) {
         font-size: 2rem;
     }
-`
+`;
 
 export const ContactH2 = styled.h2`
     font-size: 1rem;
     margin-bottom: 10px;
-`
+`;
 
 export const ContactP = styled.p`
     font-size: 1rem;
     text-align: center;
     color: white;
-`
+`;

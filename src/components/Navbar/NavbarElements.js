@@ -48,7 +48,7 @@ export const MobileIcon = styled.div`
     @media screen and (max-width: 768px) {
         display: block;
         position: absolute;
-        top: 2px;
+        top: 0;
         right: 24px;
         transform: translate(-100%, 128%);
         font-size: 1rem;
@@ -77,6 +77,7 @@ span {
     justify-self: flex-start;
     display: flex;
     align-items: top;
+    top: 0;
     margin-right: 130px;
 }
 `

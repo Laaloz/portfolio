@@ -18,7 +18,7 @@ const Contact = () => {
                 <ContactH1>Yhteystiedot</ContactH1>
                 <ContactWrapper>
                     <Form
-                        name="contact-form"
+                        name="contact v1"
                         method="post"
                         data-netlify="true"
                         onSubmit="submit"
@@ -26,10 +26,11 @@ const Contact = () => {
                         <input
                             type="hidden"
                             name="form-name"
-                            value="contact-form"
+                            value="contact v1"
                         />
                         <input type="text" name="name" placeholder="nimi..." />
                         <input
+                            htmlFor="email"
                             type="email"
                             id="email"
                             name="email"

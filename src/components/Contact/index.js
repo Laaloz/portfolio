@@ -18,16 +18,12 @@ const Contact = () => {
                 <ContactH1>Yhteystiedot</ContactH1>
                 <ContactWrapper>
                     <Form
-                        name="contact v1"
+                        name="contact"
                         method="post"
                         data-netlify="true"
-                        onSubmit="submit"
+                        data-netlify-honeypot="bot-field"
                     >
-                        <input
-                            type="hidden"
-                            name="form-name"
-                            value="contact v1"
-                        />
+                        <input type="hidden" name="form-name" value="contact" />
                         <input type="text" name="name" placeholder="nimi..." />
                         <input
                             htmlFor="email"

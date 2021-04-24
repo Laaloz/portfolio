@@ -29,12 +29,15 @@ const Contact = () => {
                             value="contact v1"
                         />
                         <input type="text" name="name" placeholder="nimi..." />
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="@sähköposti..."
-                        />
+                        <label htmlFor="email">
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="@sähköposti..."
+                            />
+                        </label>
+
                         <textarea
                             name="message"
                             placeholder="teksti..."

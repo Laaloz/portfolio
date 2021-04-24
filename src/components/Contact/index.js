@@ -31,6 +31,7 @@ const Contact = () => {
                         <input type="text" name="name" placeholder="nimi..." />
                         <input
                             type="email"
+                            id="email"
                             name="email"
                             placeholder="@sähköposti..."
                         />

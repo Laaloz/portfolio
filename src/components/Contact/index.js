@@ -17,21 +17,24 @@ const Contact = () => {
             <ContactContainer id="contact">
                 <ContactH1>Yhteystiedot</ContactH1>
                 <ContactWrapper>
-                    <Form name="contact" netlify>
+                    <Form
+                        name="contact v1"
+                        method="post"
+                        data-netlify="true"
+                        onSubmit="submit"
+                    >
                         <input
-                            type="text"
-                            id="fname"
-                            name="name"
-                            placeholder="nimi..."
+                            type="hidden"
+                            name="form-name"
+                            value="contact v1"
                         />
+                        <input type="text" name="name" placeholder="nimi..." />
                         <input
                             type="email"
-                            id="sposti"
                             name="email"
                             placeholder="@sähköposti..."
                         />
                         <textarea
-                            id="message"
                             name="message"
                             placeholder="teksti..."
                             height="30"

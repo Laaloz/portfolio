@@ -19,14 +19,14 @@ const Contact = () => {
                 <ContactWrapper>
                     <Form
                         name="contact-form"
-                        method="POST"
+                        method="post"
                         data-netlify="true"
                         onSubmit="submit"
                     >
                         <input
                             type="hidden"
                             name="form-name"
-                            value="contact v1"
+                            value="contact-form"
                         />
                         <input type="text" name="name" placeholder="nimi..." />
                         <input

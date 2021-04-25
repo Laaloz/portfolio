@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const BlogContainer = styled.div`
     background: #272727;
+    max-width: 1500px;
 `;
 
 export const BlogWrapper = styled.div`

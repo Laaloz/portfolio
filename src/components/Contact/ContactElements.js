@@ -3,6 +3,7 @@ import imageOne from "../../images/tausta-webbi.jpg";
 
 export const ContactContainer = styled.div`
     height: 100vh;
+    max-width: 1500px;
     min-height: 800px;
     display: flex;
     flex-direction: column;

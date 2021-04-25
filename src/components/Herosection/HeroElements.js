@@ -12,7 +12,7 @@ export const HeroContainer = styled.div`
     min-height: 320px;
     position: relative;
     z-index: 1;
-    max-width: 1500px;
+    max-width: 1600px;
 
     @media screen and (max-width: 480px) {
         height: 80vh;

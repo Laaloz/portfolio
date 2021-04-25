@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const BlogContainer = styled.div`
     background: #272727;
-    max-width: 1500px;
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
 `;
 
 export const BlogWrapper = styled.div`

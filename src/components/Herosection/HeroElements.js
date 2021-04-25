@@ -62,6 +62,7 @@ export const HeroH1 = styled.div`
     font-weight: bold;
     padding-left: 2rem;
     color: #cbcbcb;
+    position: sticky;
 
     @media screen and (max-width: 768px) {
         font-size: 1.3rem;
@@ -77,6 +78,7 @@ export const Hero1H1 = styled.div`
     color: #cbcbcb;
     margin-top: 2rem;
     padding-left: 50vw;
+    position: sticky;
 
     @media screen and (max-width: 768px) {
         font-size: 1.3rem;

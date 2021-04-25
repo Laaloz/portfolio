@@ -82,7 +82,8 @@ export const Form = styled.form`
 
     input[type="submit"] {
         width: 70px;
-        height: 25px;
+        height: 30px;
+        padding: 3px 0;
         border-radius: 8px;
 
         &:hover {

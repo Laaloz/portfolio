@@ -38,7 +38,7 @@ const Navbar = ({ toggle }) => {
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
                     <NavLogo to="/" onClick={toggleHome}>
-                        Laaloceesay.
+                        LaaloCeesay.
                     </NavLogo>
                     <SosialWrapper>
                         <SosialMediaOne>

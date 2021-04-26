@@ -79,7 +79,7 @@ const Blog = () => {
                             ES6:n nuolifunktioon, propseihi: eli tiedonsiirto
                             komponenttien välillä, debuggaamiseen, painikkeiden
                             käyttöön, jsx:ään, math.random funktioon ja moneen
-                            muuhun reactiin ja javascriptiä sisältävään asiaan.
+                            muuhun reactin ja javascriptiä sisältävään asiaan.
                         </BlogP>
                     </BlogContent>
                 </BlogWrapper>

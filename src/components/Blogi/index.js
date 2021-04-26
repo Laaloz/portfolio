@@ -67,6 +67,19 @@ const Blog = () => {
                             ohjelmointirajapinta eli API joka mahdollistaa
                             selaimessa esitettävien web-sivuja vastaavien
                             elementtipuiden muokkaamisen ohjelmallisesti.
+                            <br></br>
+                            <br></br>
+                            <li>FullStack Osa1:</li>
+                            Tämä osio keskittyi reactin alkeisiin ja tehtäviin
+                            jotka kirjoitettiin JavaScriptillä. Tehtävissä
+                            luotiin simppeleitä react sovelluksia jossa
+                            tutustuttiin reactin toimintaan ja komponentteihin
+                            sekä tutustuttiin:
+                            <br></br>
+                            ES6:n nuolifunktioon, propseihi: eli tiedonsiirto
+                            komponenttien välillä, debuggaamiseen, painikkeiden
+                            käyttöön, jsx:ään, math.random funktioon ja moneen
+                            muuhun reactiin ja javascriptiä sisältävään asiaan.
                         </BlogP>
                     </BlogContent>
                 </BlogWrapper>

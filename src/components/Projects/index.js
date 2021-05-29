@@ -8,6 +8,7 @@ function Projects() {
             <ProjectsContainer>
                 <ProjectsWrapper>
                     <VideoJS />
+                    <p>still in progress...</p>
                 </ProjectsWrapper>
             </ProjectsContainer>
         </>

@@ -58,7 +58,7 @@ export const SidebarLink = styled(LinkS)`
     transition: 0.2s ease-in-out;
     color: #cbcbcb;
     cursor: pointer;
-    margin-top: 10rem;
+    margin-top: 8.5rem;
 
     &:hover {
         font-size: 1.5rem;

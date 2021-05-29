@@ -38,6 +38,16 @@ function Sidebar({ isOpen, toggle }) {
                             blog
                         </SidebarLink>
                         <SidebarLink
+                            to="projects"
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            exact="true"
+                            activeClass="active"
+                        >
+                            projects
+                        </SidebarLink>
+                        <SidebarLink
                             to="contact"
                             smooth={true}
                             duration={500}

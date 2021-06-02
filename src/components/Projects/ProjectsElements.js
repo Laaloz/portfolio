@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
     background: #80b9a5;
+    max-width: 2560px;
 
     @media screen and (max-width: 768px) {
         padding: 40px 0;

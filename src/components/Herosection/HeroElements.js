@@ -10,7 +10,6 @@ export const HeroContainer = styled.div`
     padding: 0 24px;
     height: 100vh;
     min-height: 320px;
-    max-height: 1100px;
     position: relative;
     z-index: 1;
 
@@ -55,7 +54,7 @@ export const HeroWrapper = styled.div`
     z-index: 1;
     width: 100%;
     padding: 0;
-    max-width: 1155px;
+    max-width: 1205px;
 `;
 
 export const HeroH1 = styled.div`

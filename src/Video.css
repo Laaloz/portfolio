@@ -2,9 +2,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
-    width: 80vw;
-    height: 70vh;
+    width: 77.4vw;
+    height: 37vw;
 }
 
 .vjs-poster {
@@ -15,4 +14,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: .3em;
 }

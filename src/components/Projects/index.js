@@ -1,6 +1,6 @@
 import React from "react";
 import VideoJS from "../Video";
-import { ProjectsContainer, ProjectsWrapper } from "./ProjectsPageElements";
+import { ProjectsContainer, ProjectsWrapper, Famazon, Bg, Summon, H1 } from "./ProjectsPageElements";
 
 function Projects() {
     return (
@@ -8,7 +8,24 @@ function Projects() {
             <ProjectsContainer>
                 <ProjectsWrapper>
                     <VideoJS />
-                    <p>content in progress...</p>
+                </ProjectsWrapper>
+
+                <ProjectsWrapper>
+                <Bg>
+                <H1>Fake Amazon</H1>
+                <a href="https://fir-34a4c.firebaseapp.com/">
+                <Famazon />
+                </a>
+                </Bg>
+                </ProjectsWrapper>
+
+                <ProjectsWrapper>
+                <Bg>
+                <H1>Summon Research</H1>
+                <a href="https://www.summon.fi/">
+                <Summon />
+                </a>
+                </Bg>
                 </ProjectsWrapper>
             </ProjectsContainer>
         </>

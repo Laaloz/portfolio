@@ -8,6 +8,7 @@ import {
     Bg,
     Summon,
     H1,
+    A,
 } from "./ProjectsPageElements";
 
 function Projects() {
@@ -22,6 +23,11 @@ function Projects() {
                 <ProjectsWrapper>
                     <Bg>
                         <H1>Fake Amazon</H1>
+                        <A>
+                            <a href="https://github.com/Laaloz/amazon-clone/blob/main/README.md">
+                                You can find code here
+                            </a>
+                        </A>
                         <a href="https://fir-34a4c.firebaseapp.com/">
                             <Famazon />
                         </a>

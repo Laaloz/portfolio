@@ -1,55 +1,45 @@
 import React from "react";
-import mail from "../../images/mail-mobile.svg";
-import location from "../../images/location-mobile.svg";
+import { FaEnvelope, FaLocationArrow, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import {
     ContactContainer,
-    ContactH1,
+    ContactH2,
     ContactWrapper,
-    ContactIcon,
+    ContactA,
     ContactP,
     ContactCard,
-    Form,
+    SocialIcons,
+    SosialMedia,
 } from "./ContactElements";
 
 const Contact = () => {
     return (
         <>
             <ContactContainer id="contact">
-                <ContactH1>Yhteystiedot</ContactH1>
-                <ContactWrapper>
-                    <Form
-                        name="contact"
-                        method="post"
-                        data-netlify="true"
-                        data-netlify-honeypot="bot-field"
-                    >
-                        <input type="hidden" name="form-name" value="contact" />
-                        <input type="text" name="name" placeholder="nimi..." />
-                        <input
-                            htmlFor="email"
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="@sähköposti..."
-                        />
-                        <textarea
-                            name="message"
-                            placeholder="teksti..."
-                            height="30"
-                            rows="20"
-                        ></textarea>
-                        <input
-                            type="submit"
-                            className="send-message"
-                            value="Viesti"
-                        />
-                    </Form>
+                <ContactWrapper className="container">
+                    <ContactH2>Yhteystiedot</ContactH2>
+
                     <ContactCard>
-                        <ContactIcon src={mail} />
-                        <ContactP>laaloceesay@gmail.com</ContactP>
-                        <ContactIcon src={location} />
-                        <ContactP>Jyväskylä</ContactP>
+                        <ContactA href="mailto:laaloceesay@gmail.com"><FaEnvelope alt="mail" /> laaloceesay@gmail.com</ContactA>
+                        <ContactP> <FaLocationArrow alt="location" /> Jyväskylä</ContactP>
                     </ContactCard>
+
+                    <SocialIcons>
+                        <SosialMedia>
+                            <a href="https://github.com/Laaloz" target="_blank" rel="noreferrer" aria-label="Link to github">
+                                <FaGithub alt="github" />
+                            </a>
+                        </SosialMedia>
+                        <SosialMedia>
+                            <a href="https://www.instagram.com/laaloz/" target="_blank" rel="noreferrer" aria-label="link to instagram">
+                                <FaInstagram alt="instagram" />
+                            </a>
+                        </SosialMedia>
+                        <SosialMedia>
+                            <a href="https://www.linkedin.com/in/laaloceesay/" target="_blank" rel="noreferrer" aria-label="link to linkedin">
+                                <FaLinkedin alt="linkedin" />
+                            </a>
+                        </SosialMedia>
+                    </SocialIcons>
                 </ContactWrapper>
             </ContactContainer>
         </>

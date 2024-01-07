@@ -1,32 +1,43 @@
 import styled from "styled-components";
-import imageOne from "../../images/eka-webbi.png";
-import koodi from "../../images/code-mobile.svg";
+import imageOne from "../../images/eka-webbi.jpg";
+
+export const HeroContent = styled.div`
+`;
 
 export const HeroContainer = styled.div`
-    background: #f3f3f3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 24px;
-    height: 100vh;
-    min-height: 320px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
     z-index: 1;
+    gap: 2rem;
+    padding-top: 6rem;
 
-    @media screen and (max-width: 480px) {
-        height: 80vh;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0 24px;
+        min-height: 320px;
+        padding: 0;
+    }
+
+    @media screen and (min-width: 960px) {
+        padding: 0
     }
 `;
 
 export const HeroBg = styled.div`
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    background: linear-gradient(to left, #B0C3B4 88%, transparent 12%);
+
+    @media screen and (min-width: 960px) {
+        max-height: 37rem;
+    }
 `;
 
 export const BgPicture = styled.image`
@@ -34,72 +45,68 @@ export const BgPicture = styled.image`
     background-repeat: no-repeat;
     display: block;
     height: 100%;
-    min-width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    width: 100%;
     background-size: cover;
     background-position: center top;
-    z-index: -10;
-
-    @media screen and (max-width: 480px) {
-        background-position: contain;
-    }
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    margin-right: 2rem;
+    margin-bottom: -4rem;
+    box-shadow: 0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);
 `;
 
 export const HeroWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
-    height: 80px;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
     z-index: 1;
+    row-gap: 0.5rem;
     width: 100%;
+    max-width: 22rem;
     padding: 0;
-    max-width: 1205px;
 `;
 
-export const HeroH1 = styled.div`
-    font-size: 2rem;
+export const HeroH1 = styled.h1`
+    font-size: 1.5rem;
     font-weight: bold;
-    padding-left: 2rem;
-    color: #cbcbcb;
+    color: #88978C;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 
-    @media screen and (max-width: 768px) {
-        font-size: 1.3rem;
-        bottom: 2rem;
-        position: absolute;
+    @media screen and (min-width: 768px) {
+        font-size: 2rem;
+    }
+
+    @media screen and (min-width: 960px) {
+        font-size: 2.25rem;
     }
 `;
 
-export const Hero1H1 = styled.div`
-    font-size: 2rem;
+export const HeroH2 = styled.div`
+    font-size: 1.5;
     font-weight: bold;
     padding: 0;
-    color: #cbcbcb;
-    margin-top: 2rem;
+    color: background: #585859;
 
     @media screen and (max-width: 768px) {
         font-size: 1.3rem;
-        bottom: 5rem;
         padding: 0;
-        right: 2rem;
-        position: absolute;
     }
 `;
 
-export const CodeImg = styled.img.attrs({
-    src: `${koodi}`,
-})`
-    width: 30px;
-    height: 30px;
-    display: grid;
-    margin-left: 1.7rem;
-    margin-top: -0.8rem;
+export const HeroH3 = styled.div`
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: 400;
+    padding: 0;
+    color: #585859;
+    width: fit-content;
+    height: 20px;
+    margin-bottom 1rem;
 
     @media screen and (max-width: 768px) {
-        bottom: -1.3rem;
-        right: 0.9rem;
-        position: absolute;
-        width: 27px;
-        height: 27px;
+        font-size: 1.1rem;
     }
 `;

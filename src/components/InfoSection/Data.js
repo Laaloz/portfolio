@@ -1,38 +1,19 @@
 import picOne from "../../images/temppeli.jpg";
-import picTwo from "../../images/computer.svg";
 
-export const homeObjOne = {
+export const infoData = {
     id: "about",
     lightBg: true,
     lightText: false,
     lightTextDesc: true,
-    topline: "Moi!",
+    topline: "(ノಠ益ಠ)ノ彡┻━┻",
+    description: "",
     headline:
-        "Olen Laalo Jyväskylästä. Harrastan valokuvausta ja koodausta. Teoksiini käytän mm. Adobe XD, React, HTML, CSS, JavaScript, Lightroom sekä muita kirjastoja ja työkaluja. Ajanvietteeksi tykkään myös maastopyöräillä, frisbeegolfata ja vapaaotella.",
-    buttonLabel: null,
+        "Vuonna 2019 päätin haastaa itseni osallistumalla avoimeen Java-kurssiin ja uppouduin täysin koodaamisen pariin. Tästä innostukseni jatkui web-kehityksen maailmaan. Nykyään keskityn pääasiassa verkkosivujen ja verkkokauppojen kehittämiseen. Vapaa-ajallani olen myös rakentanut omia näppäimistöjä ja tietokoneita sekä asentanut niihin räätälöityjä laiteohjelmistoja. Kun en ole tietokoneen ääressä, maastopyöräilen, laskettelen, valokuvaan ja nautin ruoanlaitosta sekä vietän aikaa läheisteni seurassa.",
+    descriptionTwo: "",
     imgStart: true,
     img: `${picOne}`,
     alt: "temppeli",
     dark: false,
     primary: false,
     darkText: true,
-};
-
-export const homeObjTwo = {
-    id: "blog",
-    lightBg: false,
-    lightText: true,
-    lightTextDesc: true,
-    topline: "Devaaja Blogi",
-    description: "<body>",
-    headline:
-        "Tänne tarkoitukseni on kirjoittaa blogia koodaukseen liittyvistä asioista ja omasta oppimisesta. Tulevaisuudessa toivottavasti myös työllistyn alalle.",
-    descriptionTwo: "</body>",
-    buttonLabel: "Blogiin",
-    imgStart: false,
-    img: `${picTwo}`,
-    alt: "computer",
-    dark: true,
-    primary: true,
-    darkText: false,
 };

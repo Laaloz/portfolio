@@ -1,83 +1,115 @@
 import styled from "styled-components";
-import fimage from "../../images/fimage.png";
-import summon from "../../images/summon.png";
 
 export const ProjectsContainer = styled.div`
     height: 100%;
-    background: #f8f0e6;
+    background: #F3F3F3;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 0 24px;
-    min-height: 320px;
+    min-height: 100vh;
     position: relative;
     z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 40px;
 `;
 
 export const ProjectsWrapper = styled.div`
     margin: 0.5em 0;
     padding: 1em 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`;
-export const A = styled.div`
-    font-size: 1.3em;
-    padding: 0 0 0.8em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-export const H1 = styled.div`
-    font-size: 2em;
-    font-weight: bold;
-    padding: 0.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-export const Bg = styled.div`
-    width: 77.4vw;
-    height: 45vw;
-    overflow: hidden;
-`;
-
-export const Famazon = styled.div`
-    background-image: url(${fimage});
-    background-repeat: no-repeat;
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
     height: 100%;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    background-position: center top;
-    z-index: -10;
-    cursor: pointer;
 
-    &:hover {
-        opacity: 70%;
+    @media screen and (min-width: 960px) {
+        row-gap: 4rem;
+
+        > :nth-child(even) {
+            display: flex;
+            flex-direction: row-reverse;
+        }
     }
 `;
 
-export const Summon = styled.div`
-    background-image: url(${summon});
-    background-repeat: no-repeat;
-    display: block;
-    height: 100%;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    background-position: center top;
-    z-index: -10;
-    cursor: pointer;
+export const Category = styled.button`
+    background: transparent;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 0.25rem 0.35rem;
+    border: 1px solid #060709;
+    color: #060709;
 
-    &:hover {
-        opacity: 70%;
+    @media screen and (min-width: 960px) {
+        font-size: 0.8rem;
+    }
+`;
+
+export const ImageWrapper = styled.div`
+    display: flex;
+
+    @media screen and (min-width: 960px) {
+        width: 50%;
+    }
+`;
+
+export const TextContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+
+    h1 {
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    a {
+        margin-top: 1rem;
+    }
+
+    @media screen and (min-width: 960px) {
+        width: 50%;
+    }
+`;
+
+export const Title = styled.h3`
+    display: flex;
+
+    @media screen and (min-width: 960px) {
+        margin-top: 0.75rem;
+    }
+`;
+
+export const Textarea = styled.p`
+    display: flex;
+    line-height: 1.5;
+    color: #585859;
+`;
+
+export const CardWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    column-gap: 3rem;
+    row-gap: 1.25rem;
+    color: #060709;
+
+    a {
+        display: flex;
+        color: #060709;
+
+        &:hover {
+            // opacity: 0.6;
+            color: green;
+        }
+    }
+
+    img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+
+    @media screen and (min-width: 960px) {
+        flex-direction: row;
     }
 `;

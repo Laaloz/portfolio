@@ -3,47 +3,45 @@ import styled from "styled-components";
 export const InfoContainer = styled.div`
     color: #fff;
     background: ${({ lightBg }) => (lightBg ? "#F3F3F3" : "#272727")};
+    padding: 6rem 0 5rem 0;
 
-    @media screen and (max-width: 768px) {
-        padding: 100px 0;
+    @media screen and (min-width: 960px) {
+        background: linear-gradient(to left, #F3F3F3 88%, transparent 12%);
+        padding: 0;
     }
 `;
 
 export const InfoWrapper = styled.div`
-    display: grid;
-    z-index: 1;
-    height: 800px;
-    width: 100%;
-    max-width: 1100px
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 10px;
-    justify-content: center;
+    height: auto;
+
+    @media screen and (min-width: 960px) {
+        height: 800px;
+    }
 `;
 
 export const InfoRow = styled.div`
     display: grid;
-    grid-auto-columns: minmax(aut, 1fr);
+    gap: 3rem;
     align-items: center;
     grid-template-areas: ${({ imgStart }) =>
-        imgStart ? `'col2 col1'` : `'col1 col2'`};
-
-    @media screen and (max-width: 768px) {
+    imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
+   
+    @media screen and (min-width: 960px) {
         grid-template-areas: ${({ imgStart }) =>
-            imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
+    imgStart ? `'col2 col1'` : `'col1 col2'`};
+
+        width: 100%;
+        gap: 5rem;
     }
 `;
 
 export const Column1 = styled.div`
     margin-bottom: 0;
-    padding: 0 15px;
     grid-area; col1;
 `;
 
 export const Column2 = styled.div`
-    margin-bottom: 15px;
     width: 100%;
-    padding: 0 15px;
     grid-area: col2;
 `;
 
@@ -51,28 +49,27 @@ export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top: 0;
     padding-bottom: 0;
+
+     @media screen and (min-width: 960px) {
+        max-width: 35vw;
+    }
 `;
 
-export const TopLine = styled.p`
-    color: ${({ lightText }) => (lightText ? "#44769f" : "#44769f")};
-    font-size: 22px;
+export const TopLine = styled.h3`
+    color: ${({ lightText }) => (lightText ? "#44769f" : "#585859")};
+    font-size: 1.25rem;
     line-height: 16px;
     font-weight: 700;
-    letter-spacing: 1.4px;
+    line-height: 1.5;
     text-transform: uppercase;
     margin-bottom: 25px;
 `;
 
-export const Heading = styled.h1`
-    margin-bottom: 22px;
-    font-size: 22px;
-    line-height: 1.25;
+export const Heading = styled.p`
+    font-size: 1rem;
+    line-height: 1.5;
     font-weight: 400;
-    color: ${({ lightText }) => (lightText ? "#B9B9B9" : "#474747")};
-
-    @media screen and (max-width: 480px) {
-        font-size: 20px;
-    }
+    color: ${({ lightText }) => (lightText ? "#B9B9B9" : "#585859")};
 `;
 
 export const Subtitle = styled.p`
@@ -86,17 +83,24 @@ export const Subtitle = styled.p`
 export const BtnWrap = styled.div`
     display: flex;
     justify-content: flex-start; 
-    }
 `;
 
 export const ImgWrap = styled.div`
+    display: flex;
     max-width: 555px;
     height: 100%;
+
+    @media screen and (min-width: 960px) {
+        max-width: none;
+    }
 `;
 
 export const Img = styled.img`
     width: 100%;
-    margin: 0 0 10px 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    max-height: 37rem;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
 
     lines {
         opacity: 0;

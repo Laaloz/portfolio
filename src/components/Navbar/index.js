@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaInstagram, FaGithub } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 import {
     Nav,
     NavbarContainer,
@@ -8,17 +9,17 @@ import {
     NavMenu,
     NavItem,
     NavLinks,
-    SosialMediaOne,
-    SosialMediaTwo,
     SosialWrapper,
 } from "./NavbarElements";
 import { animateScroll as scroll } from "react-scroll";
 
 const Navbar = ({ toggle }) => {
     const [scrollNav, setScrollNav] = useState(false);
+    const [projectsActive, setProjectsActive] = useState(false);
+    const [contactActive, setContactActive] = useState(false);
 
     const changeNav = () => {
-        if (window.scrollY >= 200) {
+        if (window.scrollY >= 30) {
             setScrollNav(true);
         } else {
             setScrollNav(false);
@@ -33,86 +34,84 @@ const Navbar = ({ toggle }) => {
         scroll.scrollToTop();
     };
 
+    const navigate = useNavigate();
+
+    const handleNavigateAndScroll = (to) => {
+        // Navigate to the front page first
+        navigate("/");
+
+        // Scroll to the desired section after a short delay
+        setTimeout(() => {
+            const targetSection = document.getElementById(to);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 200); // Adjust the delay as needed
+    };
+
     return (
         <>
-            <Nav scrollNav={scrollNav}>
-                <NavbarContainer>
-                    <NavLogo to="/" onClick={toggleHome}>
-                        LaaloCeesay.
-                    </NavLogo>
+            <Nav scrollNav={scrollNav} className={`${projectsActive ? 'nav-black' : ''} ${contactActive ? 'nav-beige' : ''}`}>
+                <NavbarContainer className="container">
                     <SosialWrapper>
-                        <SosialMediaOne>
-                            <a href="https://github.com/Laaloz">
-                                <span>
-                                    <FaGithub />
-                                </span>
-                            </a>
-                        </SosialMediaOne>
-                        <SosialMediaTwo>
-                            <a href="https://www.instagram.com/laaloz/">
-                                <span>
-                                    <FaInstagram />
-                                </span>
-                            </a>
-                        </SosialMediaTwo>
+                        <NavLogo to="/" onClick={toggleHome}>
+                            LaaloCeesay.
+                        </NavLogo>
+
+                        <MobileIcon onClick={toggle}>
+                            <FaBars />
+                        </MobileIcon>
+
+                        <NavMenu>
+                            <NavItem>
+                                <NavLinks
+                                    to="about"
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact="true"
+                                    offset={-80}
+                                    activeClass="active"
+                                    onClick={() => handleNavigateAndScroll("about")}
+                                >
+                                    tietoa
+                                </NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks
+                                    to="projects"
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact="true"
+                                    offset={-80}
+                                    className="nav-projects"
+                                    activeClass="active"
+                                    onSetActive={() => setProjectsActive(true)}
+                                    onSetInactive={() => setProjectsActive(false)}
+                                    onClick={() => handleNavigateAndScroll("projects")}
+                                >
+                                    projektit
+                                </NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks
+                                    to="contact"
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact="true"
+                                    offset={-80}
+                                    activeClass="active"
+                                    onSetActive={() => setContactActive(true)}
+                                    onSetInactive={() => setContactActive(false)}
+                                    onClick={() => handleNavigateAndScroll("contact")}
+                                >
+                                    yhteystiedot
+                                </NavLinks>
+                            </NavItem>
+                        </NavMenu>
                     </SosialWrapper>
-                    <MobileIcon onClick={toggle}>
-                        <FaBars />
-                    </MobileIcon>
-                    <NavMenu>
-                        <NavItem>
-                            <NavLinks
-                                to="about"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
-                                offset={-80}
-                                activeClass="active"
-                            >
-                                about
-                            </NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks
-                                to="blog"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
-                                offset={-80}
-                                activeClass="active"
-                            >
-                                blog
-                            </NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks
-                                to="projects"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
-                                offset={-80}
-                                activeClass="active"
-                            >
-                                projects
-                            </NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks
-                                to="contact"
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
-                                offset={-80}
-                                activeClass="active"
-                            >
-                                contact
-                            </NavLinks>
-                        </NavItem>
-                    </NavMenu>
                 </NavbarContainer>
             </Nav>
         </>

@@ -2,7 +2,7 @@ import React from "react";
 import VideoPlayer from "react-video-js-player";
 import shopify from "../Videos/shopifyVideo.m4v";
 import shopifyImg from "../images/shopifyImg.png";
-import "../Video.css";
+import "../Video.scss";
 
 const VideoJS = () => {
     const videoSrc = shopify;

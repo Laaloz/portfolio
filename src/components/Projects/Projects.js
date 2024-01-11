@@ -106,7 +106,7 @@ const Projects = ({
                             autoScroll: {
                                 pauseOnHover: false,
                                 pauseOnFocus: false,
-                                speed: 0.5,
+                                speed: 0.8,
                             },
                         }}
                     >

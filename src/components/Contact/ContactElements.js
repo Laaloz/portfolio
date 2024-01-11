@@ -1,20 +1,12 @@
 import styled from "styled-components";
 
 export const ContactContainer = styled.div`
-    height: 91vh;
+    height: 92vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #EEE7E1;
     position: relative;
-
-    @media screen and (max-width: 768px) {
-        height: 100vh;
-    }
-
-    @media screen and (max-width: 480px) {
-        height: 900px;
-    }
 `;
 
 export const ContactWrapper = styled.div`

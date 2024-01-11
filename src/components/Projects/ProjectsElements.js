@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
+    display: flex;
+    align-items: center;
     overflow: hidden;
     background: #111111;
 `;
@@ -16,7 +18,6 @@ export const ProjectsWrapper = styled.div`
     gap: 3rem;
 
     @media screen and (min-width: 960px) {
-        min-height: 800px;
         width: 100%;
         padding: 6rem 0;
     }
@@ -52,7 +53,7 @@ export const TopContent = styled.div`
     }
 `;
 
-export const Column = styled.a`
+export const Column = styled.div`
     position: relative
 `;
 
@@ -143,7 +144,7 @@ export const Categories = styled.div`
 `;
 
 export const Category = styled.button`
-    color: ${({ lightText }) => (lightText ? "#fffef9e6" : "#fffef9e6")};
+    color: ${({ $lighttext }) => ($lighttext ? "#fffef9e6" : "#fffef9e6")};
     font-size: 0.75rem;
     border-radius: 40px;
     // background-color: #fff3;
@@ -166,7 +167,7 @@ export const Description = styled.p`
     font-size: 22px;
     line-height: 1.25;
     font-weight: 400;
-    color: ${({ lightText }) => (lightText ? "#fffef9e6" : "#474747")};
+    color: ${({ $lighttext }) => ($lighttext ? "#fffef9e6" : "#474747")};
 
     @media screen and (max-width: 480px) {
         font-size: 20px;

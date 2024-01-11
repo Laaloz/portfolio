@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
     "@testing-library/user-event": "latest",
@@ -14,13 +16,13 @@
     "react-icons": "latest",
     "react-router-dom": "^6.21.1",
     "react-scripts": "^5.0.1",
-    "react-scroll": "latest",
+    "react-scroll": "^1.9.0",
     "react-spring": "^9.7.3",
     "react-video-js-player": "latest",
     "resize-observer-polyfill": "^1.5.1",
     "sass": "^1.69.5",
+    "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "latest",
-    "swiper": "^11.0.5",
     "web-vitals": "latest"
   },
   "scripts": {

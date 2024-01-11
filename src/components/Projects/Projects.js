@@ -1,8 +1,8 @@
 import React from "react";
 import { Button } from "../ButtonElements";
-import { Autoplay, Navigation, Scrollbar } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 import {
     ProjectsContainer,
@@ -39,7 +39,7 @@ const Projects = ({
     projectTwo,
     projectThree,
     projectFour,
-    lightText,
+    $lighttext,
     headline,
     headlineTwo,
     headlineThree,
@@ -83,35 +83,39 @@ const Projects = ({
                         </BtnWrap>
                     </TopContent>
 
-                    <Swiper
-                        modules={[Autoplay, Navigation, Scrollbar]}
-                        spaceBetween={25}
-                        slidesPerView={1.25}
-                        loop={true}
-                        draggable={true}
-                        autoplay={{
-                            delay: 600,
-                            pauseOnMouseEnter: true,
-                        }}
-                        speed={3000}
-                        breakpoints={{
-                            768: {
-                                slidesPerView: 2.5,
-                                spaceBetween: 20,
-                                touchRatio: 0,
+                    <Splide
+                        extensions={{ AutoScroll }}
+                        options={{
+                            type: 'loop',
+                            gap: '1.5rem',
+                            drag: 'free',
+                            pagination: false,
+                            arrows: false,
+                            cover: true,
+                            breakpoints: {
+                                768: {
+                                    perPage: 1.5,
+                                },
+                                9999: {
+                                    perPage: 2.5,
+                                },
                             },
-                        }}
-                        navigation={{
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
+                            isNavigation: true,
+                            pauseOnHover: false,
+                            pauseOnFocus: false,
+                            autoScroll: {
+                                pauseOnHover: false,
+                                pauseOnFocus: false,
+                                speed: 0.5,
+                            },
                         }}
                     >
                         {extendedData.map((data, index) => (
-                            <SwiperSlide key={index}>
+                            <SplideSlide key={index}>
                                 <Url href={data.projectUrl} target="_blank">
                                     <Column className="column">
                                         <ImgWrap>
-                                            <Img src={data.image} alt={alt} />
+                                            <Img loading="lazy" src={data.image} alt={alt} />
                                         </ImgWrap>
 
                                         <Blur className="blur">
@@ -123,16 +127,16 @@ const Projects = ({
                                         <TextWrapper>
                                             <Categories>
                                                 <Category>{data.topline}</Category>
-                                                <Category lightText={lightText}>
+                                                <Category $lighttext={$lighttext.toString()}>
                                                     {data.headline}
                                                 </Category>
                                             </Categories>
                                         </TextWrapper>
                                     </Column>
                                 </Url>
-                            </SwiperSlide>
+                            </SplideSlide>
                         ))}
-                    </Swiper>
+                    </Splide>
                 </ProjectsWrapper>
             </ProjectsContainer>
         </>

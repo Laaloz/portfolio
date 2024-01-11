@@ -1,20 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     SidebarContainer,
-    Icon,
-    CloseIcon,
     SidebarWrapper,
     SidebarLink,
     SidebarMenu,
 } from "./SidebarElements";
 
-function Sidebar({ isOpen, toggle }) {
+function Sidebar({ $isopen, toggle }) {
+    const [projectsActive, setProjectsActive] = useState(false);
+    const [contactActive, setContactActive] = useState(false);
+
     return (
         <div>
-            <SidebarContainer isOpen={isOpen} onClick={toggle}>
-                <Icon onClick={toggle}>
-                    <CloseIcon />
-                </Icon>
+            <SidebarContainer $isopen={$isopen} onClick={toggle} className={`${projectsActive ? 'nav-black' : ''} ${contactActive ? 'nav-beige' : ''}`}>
                 <SidebarWrapper>
                     <SidebarMenu>
                         <SidebarLink
@@ -23,39 +21,38 @@ function Sidebar({ isOpen, toggle }) {
                             duration={500}
                             spy={true}
                             exact="true"
+                            offset={-80}
                             activeClass="active"
                         >
-                            about
+                            tietoa
                         </SidebarLink>
-                        <SidebarLink
-                            to="blog"
-                            smooth={true}
-                            duration={500}
-                            spy={true}
-                            exact="true"
-                            activeClass="active"
-                        >
-                            blog
-                        </SidebarLink>
+
                         <SidebarLink
                             to="projects"
                             smooth={true}
                             duration={500}
                             spy={true}
                             exact="true"
+                            offset={-80}
                             activeClass="active"
+                            onSetActive={() => setProjectsActive(true)}
+                            onSetInactive={() => setProjectsActive(false)}
                         >
-                            projects
+                            projektit
                         </SidebarLink>
+
                         <SidebarLink
                             to="contact"
                             smooth={true}
                             duration={500}
                             spy={true}
                             exact="true"
+                            offset={-80}
                             activeClass="active"
+                            onSetActive={() => setContactActive(true)}
+                            onSetInactive={() => setContactActive(false)}
                         >
-                            contact
+                            yhteystiedot
                         </SidebarLink>
                     </SidebarMenu>
                 </SidebarWrapper>

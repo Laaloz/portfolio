@@ -10,6 +10,7 @@ import {
     ProjectsWrapper,
     CardWrapper,
     ImageWrapper,
+    Img,
     Title,
     Textarea,
     TextContent,
@@ -29,7 +30,7 @@ function Projects() {
                 <ProjectsWrapper className="container">
                     <CardWrapper>
                         <ImageWrapper>
-                            <img src={kuori} alt="Donation" />
+                            <Img loading="lazy" src={kuori} alt="Donation" />
                         </ImageWrapper>
 
                         <TextContent>
@@ -52,7 +53,7 @@ function Projects() {
 
                     <CardWrapper>
                         <ImageWrapper>
-                            <img src={plan} alt="Donation" />
+                            <Img loading="lazy" src={plan} alt="Donation" />
                         </ImageWrapper>
 
                         <TextContent>
@@ -75,7 +76,7 @@ function Projects() {
 
                     <CardWrapper>
                         <ImageWrapper>
-                            <img src={procope} alt="law" />
+                            <Img loading="lazy" src={procope} alt="law" />
                         </ImageWrapper>
 
                         <TextContent>
@@ -98,7 +99,7 @@ function Projects() {
 
                     <CardWrapper>
                         <ImageWrapper>
-                            <img src={kuvittajat} alt="Illustration" />
+                            <Img loading="lazy" src={kuvittajat} alt="Illustration" />
                         </ImageWrapper>
 
                         <TextContent>
@@ -121,7 +122,7 @@ function Projects() {
 
                     <CardWrapper>
                         <ImageWrapper>
-                            <img src={lily} alt="Keyboard lily" />
+                            <Img loading="lazy" src={lily} alt="Keyboard lily" />
                         </ImageWrapper>
 
                         <TextContent>

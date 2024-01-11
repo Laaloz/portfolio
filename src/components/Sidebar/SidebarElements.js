@@ -1,51 +1,35 @@
 import styled from "styled-components";
-import { FaTimes } from "react-icons/fa";
 import { Link as LinkS } from "react-scroll";
 
 export const SidebarContainer = styled.aside`
     position: fixed;
     z-index: 999;
-    width: 150px;
-    height: 60%;
-    background: black;
+    width: 100vw;
+    background: white;
     display: grid;
     align-items: center;
-    top: 0;
-    right: 0;
-    transition: 0.5s ease-in-out;
-    opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-    top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+    padding: 2rem;
+    top: 80px;
+    right: 100vw;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    border-top: 1px solid gray;
+    transition: 0.1s ease-in-out;
+    opacity: ${({ $isopen }) => ($isopen ? "100%" : "0")};
+    right: ${({ $isopen }) => ($isopen ? "0" : "-100%")};
+
+    &.nav-black {
+        box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.16);
+    }
 `;
 
 export const SidebarMenu = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 80px);
+    grid-template-rows: repeat(3);
     text-align: center;
-    background: #060709;
-    border-radius: 0 10px;
-`;
-
-export const CloseIcon = styled(FaTimes)`
-    color: #cbcbcb;
-
-    &:hover {
-        color: #18abb1;
-    }
-`;
-
-export const Icon = styled.div`
-    position: absolute;
-    top: 1.8rem;
-    right: 3.8rem;
-    background: transparent;
-    font-size: 1.6rem;
-    cursor: pointer;
-    outline: none;
 `;
 
 export const SidebarWrapper = styled.div`
-    color: #fff;
 `;
 
 export const SidebarLink = styled(LinkS)`
@@ -56,13 +40,11 @@ export const SidebarLink = styled(LinkS)`
     text-decoration: none;
     list-style: none;
     transition: 0.2s ease-in-out;
-    color: #cbcbcb;
+    color: black;
     cursor: pointer;
-    margin-top: 8.5rem;
+    padding: 1.5rem;
 
-    &:hover {
-        font-size: 1.5rem;
-        color: #ca51d2;
-        transition: 0.2s ease-in-out;
+    &.active {
+        text-decoration: underline;
     }
 `;

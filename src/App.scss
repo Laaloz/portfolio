@@ -13,12 +13,8 @@ body {
     background-color: #ffffff;
 }
 
-.swiper {
+.splide__track {
     width: 100%;
-    max-width: 100%;
-    max-height: 100vh;
-    min-height: 0;
-    min-width: 0;
     overflow: visible;
     padding: 0 1.5rem !important;
 
@@ -27,6 +23,9 @@ body {
     }
 }
 
+.splide__slide {
+    border: none !important;
+}
 .column {
     @media screen and (min-width: 960px) {
         &:hover {
@@ -50,15 +49,10 @@ body {
     background: #EEE7E1 !important;
 }
 
-.swiper-wrapper {
-    // transition-timing-function: linear !important;
-}
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     position: relative;
     z-index: 1;
     gap: 2rem;

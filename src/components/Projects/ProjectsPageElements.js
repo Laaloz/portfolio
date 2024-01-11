@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
-    height: 100%;
     background: #F3F3F3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
     position: relative;
     z-index: 1;
     padding-top: 100px;
@@ -112,4 +110,7 @@ export const CardWrapper = styled.div`
     @media screen and (min-width: 960px) {
         flex-direction: row;
     }
+`;
+
+export const Img = styled.img`
 `;

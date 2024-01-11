@@ -9,16 +9,16 @@ import Projects from "../components/Projects/Projects";
 import { projectsData } from "../components/Projects/Data";
 
 const Home = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [$isopen, setIsOpen] = useState(false);
 
     const toggle = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(!$isopen);
     };
 
     return (
         <>
-            <Sidebar isOpen={isOpen} toggle={toggle} />
-            <Navbar toggle={toggle} />
+            <Sidebar $isopen={$isopen} toggle={toggle} />
+            <Navbar $isopen={$isopen} toggle={toggle} />
             <HeroSection />
             <InfoSection {...infoData} />
             <Projects {...projectsData} />

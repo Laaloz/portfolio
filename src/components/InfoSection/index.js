@@ -14,11 +14,11 @@ import {
 } from "./InfoElements";
 
 const InfoSection = ({
-    lightBg,
+    $lightbg,
     id,
-    imgStart,
+    $imgstart,
     topline,
-    lightText,
+    $lighttext,
     darkText,
     headline,
     description,
@@ -28,9 +28,9 @@ const InfoSection = ({
 }) => {
     return (
         <>
-            <InfoContainer lightBg={lightBg} id={id}>
+            <InfoContainer $lightbg={$lightbg.toString()} id={id}>
                 <InfoWrapper className="container">
-                    <InfoRow imgStart={imgStart}>
+                    <InfoRow $imgstart={$imgstart.toString()}>
                         <Column1>
                             <TextWrapper>
                                 <TopLine>{topline}</TopLine>
@@ -39,7 +39,7 @@ const InfoSection = ({
                                     {description}
                                 </Subtitle>
                                 ) : null}
-                                <Heading lightText={lightText}>
+                                <Heading $lighttext={$lighttext.toString()}>
                                     {headline}
                                 </Heading>
                                 {descriptionTwo !== "" ? (
@@ -51,7 +51,7 @@ const InfoSection = ({
                         </Column1>
                         <Column2>
                             <ImgWrap>
-                                <Img src={img} alt={alt} />
+                                <Img loading="lazy" src={img} alt={alt} />
                             </ImgWrap>
                         </Column2>
                     </InfoRow>

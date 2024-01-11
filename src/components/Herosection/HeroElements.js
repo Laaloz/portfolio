@@ -40,7 +40,7 @@ export const HeroBg = styled.div`
     }
 `;
 
-export const BgPicture = styled.image`
+export const BgPicture = styled.img`
     background-image: url(${imageOne});
     background-repeat: no-repeat;
     display: block;

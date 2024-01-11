@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import {
     Nav,
     NavbarContainer,
@@ -13,13 +14,13 @@ import {
 } from "./NavbarElements";
 import { animateScroll as scroll } from "react-scroll";
 
-const Navbar = ({ toggle }) => {
-    const [scrollNav, setScrollNav] = useState(false);
+const Navbar = ({ $isopen, toggle }) => {
+    const [$scrollnav, setScrollNav] = useState(false);
     const [projectsActive, setProjectsActive] = useState(false);
     const [contactActive, setContactActive] = useState(false);
 
     const changeNav = () => {
-        if (window.scrollY >= 30) {
+        if (window.scrollY >= 10) {
             setScrollNav(true);
         } else {
             setScrollNav(false);
@@ -51,15 +52,15 @@ const Navbar = ({ toggle }) => {
 
     return (
         <>
-            <Nav scrollNav={scrollNav} className={`${projectsActive ? 'nav-black' : ''} ${contactActive ? 'nav-beige' : ''}`}>
+            <Nav $scrollnav={$scrollnav} className={`${projectsActive ? 'nav-black' : ''} ${contactActive ? 'nav-beige' : ''}`}>
                 <NavbarContainer className="container">
                     <SosialWrapper>
                         <NavLogo to="/" onClick={toggleHome}>
                             LaaloCeesay.
                         </NavLogo>
 
-                        <MobileIcon onClick={toggle}>
-                            <FaBars />
+                        <MobileIcon $isopen={$isopen} onClick={toggle}>
+                            {$isopen ? <FaTimes /> : <FaBars />}
                         </MobileIcon>
 
                         <NavMenu>

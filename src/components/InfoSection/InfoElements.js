@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const InfoContainer = styled.div`
+    display: flex;
     color: #fff;
-    background: ${({ lightBg }) => (lightBg ? "#F3F3F3" : "#272727")};
+    background: ${({ $lightbg }) => ($lightbg ? "#F3F3F3" : "#272727")};
     padding: 6rem 0 5rem 0;
 
     @media screen and (min-width: 960px) {
@@ -23,12 +24,12 @@ export const InfoRow = styled.div`
     display: grid;
     gap: 3rem;
     align-items: center;
-    grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
+    grid-template-areas: ${({ $imgstart }) =>
+        $imgstart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
    
     @media screen and (min-width: 960px) {
-        grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col2 col1'` : `'col1 col2'`};
+        grid-template-areas: ${({ $imgstart }) =>
+        $imgstart ? `'col2 col1'` : `'col1 col2'`};
 
         width: 100%;
         gap: 5rem;
@@ -56,7 +57,7 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.h3`
-    color: ${({ lightText }) => (lightText ? "#44769f" : "#585859")};
+    color: ${({ $lighttext }) => ($lighttext ? "#44769f" : "#585859")};
     font-size: 1.25rem;
     line-height: 16px;
     font-weight: 700;
@@ -69,7 +70,7 @@ export const Heading = styled.p`
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 400;
-    color: ${({ lightText }) => (lightText ? "#B9B9B9" : "#585859")};
+    color: ${({ $lighttext }) => ($lighttext ? "#585859" : "#B9B9B9")};
 `;
 
 export const Subtitle = styled.p`

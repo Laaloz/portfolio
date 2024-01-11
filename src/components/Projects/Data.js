@@ -5,9 +5,9 @@ import picLily from "../../images/lily.jpg";
 
 export const projectsData = {
     id: "projects",
-    lightBg: true,
-    lightText: true,
-    lightTextDesc: false,
+    $lightbg: true,
+    $lighttext: true,
+    $lighttextDesc: false,
     title: "Kädenjälki töissäni",
 
     project: "Kuvitus",
@@ -34,7 +34,7 @@ export const projectsData = {
     headlineFour: "DIY-projekti",
 
     buttonLabel: "Projektit",
-    imgStart: false,
+    $imgstart: false,
     img: `${picIllustrator}`,
     imgTwo: `${picLaw}`,
     imgThree: `${picCharity}`,
